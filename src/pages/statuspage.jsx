@@ -137,7 +137,7 @@ export default function AdminPage1() {
   <h1 className="text-4xl font-bold text-gray-800 mb-8">Admin Dashboard</h1>
   <SignedIn>
   {/* Create Service Button */}
-  <WebSocketService url=`${WS_URL}/ws_update` setServices={setServices} />
+  <WebSocketService url={`${WS_URL}/ws_update`} setServices={setServices} />
 
   <Button
     variant="outline"
