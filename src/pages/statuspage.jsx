@@ -36,7 +36,7 @@ export default function AdminPage1() {
     try {
       // Get the token from Clerk
       const token = await getToken();
-      
+      console.log(token)
       if (!token) {
         console.error("No token found!");
         return;
