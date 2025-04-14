@@ -3,7 +3,7 @@ import TestPage from "./pages/testpage"
 import AdminPage1 from "./pages/statuspage"
 import AuthPage from "./pages/Authentication"
 import PublicStatusPage from "./pages/PublicStatusPage"
-
+import { Navigate } from "react-router-dom";
  function App() {
   return (
     <div className="p-4">
@@ -11,7 +11,7 @@ import PublicStatusPage from "./pages/PublicStatusPage"
 
       <Routes>
         
-        {/* Add more routes here */}
+         <Route path="/" element={<Navigate to="/admin" replace />} />
         <Route path="/admin/" element={<AuthPage />} />
         <Route path="/:org_slug/" element={<PublicStatusPage />} />
         <Route path="/admin/dashboard" element={<AdminPage1 />} />
