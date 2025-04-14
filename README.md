@@ -1,5 +1,4 @@
-# React + Vite
-
+# React + Vite + FASTAPI
 While running the deployed app, following are the routes:
 
 - {org_slug}/status > PUBLIC STATUS PAGE
