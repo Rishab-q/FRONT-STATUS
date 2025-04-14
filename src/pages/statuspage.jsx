@@ -17,6 +17,7 @@ const SERVICE_STATUSES = [
   "Maintenance"
 ]
 const API_URL = import.meta.env.VITE_API_URL;
+const WS_URL= import.meta.env.VITE_WS_URL
 const EVENT_TYPES = [
   { value: "Scheduled maintenance", label: "Scheduled Maintenance" },
   { value: "incident", label: "Incident" }
@@ -136,7 +137,7 @@ export default function AdminPage1() {
   <h1 className="text-4xl font-bold text-gray-800 mb-8">Admin Dashboard</h1>
   <SignedIn>
   {/* Create Service Button */}
-  <WebSocketService url="ws://127.0.0.1:8000/ws_update" setServices={setServices} />
+  <WebSocketService url=`${WS_URL}/ws_update` setServices={setServices} />
 
   <Button
     variant="outline"
